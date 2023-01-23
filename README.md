@@ -2,7 +2,11 @@
 Flexible, multicore specification curve analysis for linear regression, logistic regression, fixed-effect regression, and linear mixed-effects regression.
 
 ### Note:
-This is *very* much a work in progress. Please let me know of any errors you find. I will update more in the coming weeks!
+This is a work in progress. Please let me know of any errors you find.
+
+## To install:
+Run the following in your R console:
+devtools::install_github("mattmeist/specster")  
 
 # Scripts
 ## specster.R
