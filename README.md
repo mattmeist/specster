@@ -9,11 +9,12 @@ Run the following in your R console:
 devtools::install_github("mattmeist/specster")  
 
 # Scripts
-## specster.R
-This is just a wrapper function that will first set up your specifications, and then run them. The result is a data.table with your specifications and results.
 
 ## setup_specster.R
 This function will set up your specifications. You must specify the type of model you would like to run, as this will alter what the specifications look like. For example, if you want to run mixed-effects regressions, you will be required to state at least one random intercept.
 
 ## run_specster.R
 This function will take your specifications, and run the models on however many cores you'd like to use.
+
+## plot_specster.R
+This function will plot your specifications. Note--you might prefer having more control over your plots. If so, dig into the code.
