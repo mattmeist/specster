@@ -249,10 +249,9 @@ setup_specster <- function(data,
       
     }
   }
-  specs <- as.data.table(specs)
-  specs <- specs[sample(nrow(specs)*resolution)] %>%
+  specs <- specs[sample(1:nrow(specs),nrow(specs)*resolution),] %>%
     as.data.frame()
-  specs <- expand.grid.df(specs, as.data.frame(data = data)) %>%
+  specs <- expand.grid.df(specs, data) %>%
     as.data.table()
   specs
 }
