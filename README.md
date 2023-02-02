@@ -1,7 +1,7 @@
 # specster
 Flexible, multicore specification curve analysis for linear regression, logistic regression, fixed-effect regression, and linear mixed-effects regression.
 
-### Note:
+#### Note:
 This is a work in progress. Please let me know of when you find errors.
 
 ## To install:
@@ -16,11 +16,11 @@ This function will set up your specifications. You must specify the type of mode
 ## run_specster.R
 This function will take your specifications, and run the models on however many cores you'd like to use.
 
-### Note:
+#### Note:
 If you want to run only a subset of the total number of specifications, please do so using the **resolution** argument in setup_specster(), *not* by subsetting the specifications as an argument to this function. If you do the latter, things go wrong, and quietly.
 
 ## plot_specster.R
 This function will plot your specifications. 
 
-### Note:
+#### Note:
 You might prefer having more control over your plots. If so, dig into the function here, *or* use this walkthrough: https://dcosme.github.io/2019/02/26/specification-curve-example/.
