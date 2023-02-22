@@ -2,7 +2,7 @@
 Flexible, multicore specification curve analysis for linear regression, logistic regression, fixed-effect regression, and linear mixed-effects regression.
 
 #### Note:
-This is a work in progress. Please let me know of when you find errors.
+This is a work in progress. Please let me know when you find errors.
 
 ## To install:
 Run the following in your R console:
