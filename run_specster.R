@@ -1,4 +1,3 @@
-#' This function creates up to two plots. 
 #' @returns the data.table you provide as 'specs', with results
 #' 
 #' @param specs is the specifications as a data.table. 
@@ -41,7 +40,9 @@ run_specster <- function(data.list,
   } else if (model == 'lm'){
     # If the effect is an interaction, we have to look for ":", not "*"
     specs$effect.inmod <- ifelse(stringr::str_detect(specs$effect, "\\*"),
-                                 stringr::str_replace_all(specs$effect, "\\*", "\\:"),
+                                 stringr::str_replace_all(
+                                   stringr::str_replace_all(specs$effect, "\\*", "\\:"), 
+                                   "\\s", ""),
                                  specs$effect)
     #Create empty columns to hold results
     specs$effect.coef <- rep(NA, times = nrow(specs))
@@ -89,7 +90,9 @@ run_specster <- function(data.list,
   } else if (model == 'logistic'){
     # If the effect is an interaction, we have to look for ":", not "*"
     specs$effect.inmod <- ifelse(stringr::str_detect(specs$effect, "\\*"),
-                                 stringr::str_replace_all(specs$effect, "\\*", "\\:"),
+                                 stringr::str_replace_all(
+                                   stringr::str_replace_all(specs$effect, "\\*", "\\:"), 
+                                   "\\s", ""),
                                  specs$effect)
     #Create empty columns to hold results
     specs$effect.coef <- rep(NA, times = nrow(specs))
@@ -134,7 +137,9 @@ run_specster <- function(data.list,
   } else if (model == 'felm'){
     # If the effect is an interaction, we have to look for ":", not "*"
     specs$effect.inmod <- ifelse(stringr::str_detect(specs$effect, "\\*"),
-                                 stringr::str_replace_all(specs$effect, "\\*", "\\:"),
+                                 stringr::str_replace_all(
+                                   stringr::str_replace_all(specs$effect, "\\*", "\\:"), 
+                                   "\\s", ""),
                                  specs$effect)
     #Create empty columns to hold results
     specs$effect.coef <- rep(NA, times = nrow(specs))
@@ -185,7 +190,9 @@ run_specster <- function(data.list,
   else if (model == 'lme'){
     # If the effect is an interaction, we have to look for ":", not "*"
     specs$effect.inmod <- ifelse(stringr::str_detect(specs$effect, "\\*"),
-                                 stringr::str_replace_all(specs$effect, "\\*", "\\:"),
+                                 stringr::str_replace_all(
+                                   stringr::str_replace_all(specs$effect, "\\*", "\\:"), 
+                                   "\\s", ""),
                                  specs$effect)
     #Create empty columns to hold results
     specs$effect.coef <- rep(NA, times = nrow(specs))
