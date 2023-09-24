@@ -1,3 +1,8 @@
+## Update: September 24, 2023
+After adding the ability to test interaction terms with specster, I've discovered that the plotting function is a bit/lot broken. Please use it at your own risk! 
+
+Also, I'd like to use this opportunity as a call for help. If you're interested in improving these functions, please reach out at mmeister@usfca.edu.
+
 # specster
 Flexible, multicore specification curve analysis for linear regression, logistic regression, fixed-effect regression, and linear mixed-effects regression.
 
